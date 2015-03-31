@@ -35,8 +35,9 @@ function GifWriter(buf, width, height, gopts) {
     var loop_count = gopts.loop === undefined ? null : gopts.loop;
     var global_palette = gopts.palette === undefined ? null : gopts.palette;
 
+    //Number(65535).toString(2) === 1111111111111111; 再大就超过2个字节了
     if (width <= 0 || height <= 0 || width > 65535 || height > 65535)
-        throw "Width/Height invalid."
+        throw "Width/Height invalid.";
 
     function check_palette_and_num_colors(palette) {
         var num_colors = palette.length;
