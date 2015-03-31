@@ -23,6 +23,10 @@
 // omggif is a JavaScript implementation of a GIF 89a encoder and decoder,
 // including animation and compression.  It does not rely on any specific
 // underlying system, so should run in the browser, Node, or Plask.
+//
+//关于GIF 89a
+//百度百科： http://baike.baidu.com/view/7966.htm
+//GIF spec： http://www.w3.org/Graphics/GIF/spec-gif89a.txt
 
 function GifWriter(buf, width, height, gopts) {
     var p = 0;  //指针
